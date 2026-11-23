@@ -4,14 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>موقعي الأول</title>
+    
+    <!-- هنا نضع تنسيقات CSS -->
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 100px; background-color: #f0f8ff; }
-        h1 { color: #2c3e50; }
-        p { color: #34495e; font-size: 20px; }
+        /* تنسيق الخلفية العامة للموقع */
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* تنسيق الصندوق الأبيض الذي يحتوي على النص */
+        .card {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 500px;
+        }
+
+        /* تنسيق العنوان الرئيسي */
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* تنسيق النص */
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* تنسيق الزر */
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #764ba2;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        /* تأثير عند تمرير الماوس على الزر */
+        .btn:hover {
+            background-color: #5a3782;
+        }
     </style>
 </head>
 <body>
-    <h1>مرحباً بك في موقعي الأول!</h1>
-    <p>تم إنشاء هذا الموقع بنجاح بواسطة GitHub Pages.</p>
+
+    <!-- محتوى الموقع -->
+    <div class="card">
+        <h1>مرحباً بك في موقعي الأول!</h1>
+        <p>تم إنشاء هذا الموقع بنجاح باستخدام GitHub Pages، وتم تنسيقه باستخدام CSS.</p>
+        <a href="https://github.com" class="btn" target="_blank">زيارة حسابي</a>
+    </div>
+
 </body>
 </html>
