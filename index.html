@@ -3,83 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>متجر قيم زون</title>
+    <title>متجر قيم زون | شحن الألعاب</title>
     
     <style>
+        /* إعدادات عامة */
         body {
-            background: linear-gradient(135deg, #0a1930 0%, #1a3b6e 100%); /* خلفية داكنة تناسب الشعار */
+            background-color: #0f172a; /* لون داكن احترافي */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            color: white;
             margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        .card {
-            background-color: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        /* الشريط العلوي */
+        header {
+            width: 100%;
+            background-color: #1e293b;
+            padding: 15px 0;
             text-align: center;
-            max-width: 400px;
-            animation: fadeIn 1.5s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        
+        header img {
+            width: 80px;
+            border-radius: 50%;
+            border: 2px solid #3b82f6;
         }
 
-        /* تنسيق صورة الشعار */
-        .logo-img {
-            width: 250px; /* عرض الشعار */
-            height: auto;
-            border-radius: 50%; /* لجعل الشعار دائرياً (إذا كانت الصورة مربعة) */
-            margin-bottom: 20px;
+        /* الحاوية الرئيسية */
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin-top: 40px;
+            text-align: center;
         }
 
         h1 {
-            color: #1a3b6e;
+            color: #3b82f6; /* لون أزرق */
+            font-size: 32px;
             margin-bottom: 10px;
-            font-size: 24px;
         }
 
-        p {
-            color: #666;
-            font-size: 16px;
+        p.description {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 40px;
         }
 
-        /* تنسيق زر الواتساب */
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 30px;
-            background-color: #25D366; /* لون الواتساب الأخضر */
+        /* شبكة الألعاب */
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        /* كرت اللعبة */
+        .game-card {
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #334155;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+        }
+
+        .game-card h3 {
+            margin: 0 0 10px 0;
+            color: #f8fafc;
+        }
+
+        .game-card p {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        /* زر الشراء داخل الكرت */
+        .btn-buy {
+            display: block;
+            background-color: #3b82f6;
             color: white;
             text-decoration: none;
-            border-radius: 25px;
+            padding: 10px;
+            border-radius: 8px;
             font-weight: bold;
-            font-size: 18px;
-            transition: transform 0.3s ease;
+            transition: background 0.3s;
         }
 
-        .btn:hover {
-            transform: scale(1.05); /* تكبير الزر قليلاً عند التمرير */
+        .btn-buy:hover {
+            background-color: #2563eb;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* زر الواتساب الكبير أسفل الصفحة */
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 50px;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <!-- تأكد أن اسم الصورة هنا يطابق اسم الملف الذي رفعته -->
-        <img src="logo.png" alt="شعار متجر قيم زون" class="logo-img">
-        
-        <h1>متجر قيم زون</h1>
-        <p>أهلاً بك في متجرنا! تواصل معنا مباشرة للطلب والاستفسار.</p>
-        
-        <!-- وضع رقم الواتساب في الزر -->
-        <a href="https://wa.me/249994810126" class="btn" target="_blank">تواصل معنا على واتساب</a>
+    <!-- الشريط العلوي -->
+    <header>
+        <!-- ضع اسم صورة الشعار الخاص بك هنا -->
+        <img src="logo.png" alt="شعار قيم زون">
+    </header>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="container">
+        <h1>شحن الألعاب فوراً وبأفضل الأسعار</h1>
+        <p class="description">اختر اللعبة التي تريد شحنها، وتواصل معنا مباشرة عبر الواتساب لإتمام الطلب.</p>
+
+        <!-- شبكة الألعاب -->
+        <div class="games-grid">
+            
+            <!-- كرت لعبة ببجي -->
+            <div class="game-card">
+                <h3>ببجي موبايل (PUBG)</h3>
+                <p>شحن شدات (UC) بأسعار تنافسية</p>
+                <!-- ضع رقم واتسابك مع رسالة جاهزة -->
+                <a href="https://wa.me/249994810126?text=أريد%20شحن%20ببجي" class="btn-buy">اطلب الآن</a>
+            </div>
+
+            <!-- كرت لعبة فري فاير -->
+            <div class="game-card">
+                <h3>فري فاير (Free Fire)</h3>
+                <p>شحن جواهر (Diamonds) بسرعة</p>
+                <a href="https://wa.me/249994810126?text=أريد%20شحن%20فري%20فاير" class="btn-buy">اطلب الآن</a>
+            </div>
+
+            <!-- كرت لعبة كول أوف ديوتي -->
+            <div class="game-card">
+                <h3>كول أوف ديوتي (COD)</h3>
+                <p>شحن نقاط (CP) بأمان تام</p>
+                <a href="https://wa.me/249994810126?text=أريد%20شحن%20كول%20اوف%20ديوتي" class="btn-buy">اطلب الآن</a>
+            </div>
+
+        </div>
+
+        <!-- زر التواصل العام -->
+        <a href="https://wa.me/249994810126" class="whatsapp-btn" target="_blank">تواصل معنا على واتساب</a>
     </div>
 
 </body>
